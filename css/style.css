@@ -42,10 +42,10 @@ body{
 @keyframes glow{
     0%, 100%{
         color: #fff;
-        text-shadow: 0 0 12px #fbff00, 0 0 50px #fbff00, 0 0 100px #fbff00;
+        text-shadow: 0 0 12px #c07aeb, 0 0 50px #b663ea, 0 0 100px #a033e4;
     }
     10%, 90%{
-        color: #696565;
+        /* color: #c07aeb; */
         text-shadow: none;
     }
 }
@@ -65,6 +65,7 @@ body{
 
 .greetings2 span:nth-child(1) {
     animation-delay: 0.1333333333s; /* Retraso de 0.1 segundos para la primera letra */
+    
 }
 .greetings2 span:nth-child(2) {
     animation-delay: 0.2666666667s; /* Retraso de 0.2 segundos para la segunda letra */
