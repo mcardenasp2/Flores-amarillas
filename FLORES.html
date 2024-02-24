@@ -7,24 +7,70 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="img/flowers.png" type="image/x-icon">
     <title>FLORES</title>
+    <style>
+      .flotante {
+          position: fixed; /* Posición fija */
+          top: 0; /* Distancia desde la parte superior */
+          left: 0; /* Distancia desde la izquierda */
+          width: 100%; /* Ancho del mensaje flotante *//* Fondo semi-transparente celeste claro */
+          padding: 20px; /* Espacio interno */
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+          z-index: 9999; /* Índice z alto para sobreponerse a otros elementos */
+          font-family: 'Arial', sans-serif; /* Fuente del texto */
+          font-size: 15px; /* Tamaño de la fuente */
+          color: white; /* Color del texto celeste */
+          text-align: center; 
+          
+      }
+      @keyframes aparecer {
+          from {
+              opacity: 0;
+          }
+          to {
+              opacity: 1;
+          }
+      }
+      .aparecer-letras {
+          animation: aparecer 1s ease-in-out forwards;
+          opacity: 0; /* Hacer el texto inicialmente transparente */
+          font-family: 'Arial', sans-serif;
+          font-size: 24px;
+          color: white;
+          text-align: center;
+      }
+  </style>
 </head>
 
 <body>
-  
-  <audio controls>
-    <source src="img/Floricienta.mp3" type="audio/mp3">
-    Tu navegador no soporta el elemento de audio.
-  </audio>
-</body>
+ 
 
-<!-- <body class="container">
-  <audio controls>
-    <source src="img/Floricienta.mp3" type="audio/mp3">
+
+
+
+<body class="container">
+  <!-- <audio controls id="miAudio">
+    <source src="img/Floricienta.mp3" type="audio/mpeg">
     Tu navegador no soporta el elemento de audio.
-  </audio>
+  </audio> -->
+
+  <!-- <button onclick="reproducirAudio()">Reproducir Audio</button> -->
+
+
     <div class="night"></div>
+    <div class="flotante">
+      <audio controls id="miAudio">
+        <source src="img/Floricienta.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+      </audio>
+     
+      <h1 class="aparecer-letras">Como esta flor amarilla que irradia alegría y luz, así eres tú en mi vida, Lucero. Tu presencia ilumina mis días y llena mi corazón de felicidad. ¡Gracias por ser esa hermosa flor que florece en mi camino!</h1>
+    </div>
+    
     <div class="flowers">
+     
       <div class="flower flower--1">
+       
+        
         <div class="flower__leafs flower__leafs--1">
           <div class="flower__leaf flower__leaf--1"></div>
           <div class="flower__leaf flower__leaf--2"></div>
@@ -319,6 +365,13 @@
         </div>
       </div>
     </div>
+
+    <!-- <script>
+      function reproducirAudio() {
+        var audio = document.getElementById('miAudio');
+        audio.play();
+      }
+    </script> -->
     <script src="main.js"></script>
-  </body> -->
+  </body>
 </html>
