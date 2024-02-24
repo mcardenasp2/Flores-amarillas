@@ -16,9 +16,29 @@ body{
     font-size: 6rem;
     font-weight: 900;
 }
+
 .greetings > span{
     animation: glow 2.5s ease-in-out infinite;
 }
+
+
+.greetings2{
+    font-size: 6rem;
+    font-weight: 900;
+}
+.greetings2 span {
+    animation: glow 1s infinite alternate; /* Aplicamos la animación */
+}
+
+@keyframes glow {
+    from {
+        opacity: 0; /* Empieza con opacidad 0 */
+    }
+    to {
+        opacity: 1; /* Termina con opacidad 1 */
+    }
+}
+
 @keyframes glow{
     0%, 100%{
         color: #fff;
@@ -42,6 +62,26 @@ body{
     animation-delay: .8s;
 }
 
+
+.greetings2 span:nth-child(1) {
+    animation-delay: 0.1333333333s; /* Retraso de 0.1 segundos para la primera letra */
+}
+.greetings2 span:nth-child(2) {
+    animation-delay: 0.2666666667s; /* Retraso de 0.2 segundos para la segunda letra */
+}
+.greetings2 span:nth-child(3) {
+    animation-delay: 0.4s; /* Retraso de 0.3 segundos para la tercera letra */
+}
+.greetings2 span:nth-child(4) {
+    animation-delay: 0.5333333333s; /* Retraso de 0.4 segundos para la cuarta letra */
+}
+.greetings2 span:nth-child(5) {
+    animation-delay: 0.6666666667s; /* Retraso de 0.5 segundos para la quinta letra */
+}
+.greetings2 span:nth-child(6) {
+    animation-delay: 0.8s; /* Retraso de 0.6 segundos para la sexta letra */
+}
+
 .description{
     font-size: 1.5rem;
     margin-bottom: 20px;
@@ -55,6 +95,12 @@ body{
 
 @media screen and (max-width:574px){
     .greetings{
+        display: block;
+        font-size: 3rem;
+        font-weight: 500;
+        text-align: center;
+    }
+    .greetings2{
         display: block;
         font-size: 3rem;
         font-weight: 500;
