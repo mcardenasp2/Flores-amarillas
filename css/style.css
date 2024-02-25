@@ -41,8 +41,8 @@ body{
 
 @keyframes glow{
     0%, 100%{
-        color: #fff;
-        text-shadow: 0 0 12px #9010e0, 0 0 50px #9408ec, 0 0 100px #510680;
+        color: white;
+        text-shadow: 0 0 12px #dac059, 0 0 50px #e9e026, 0 0 100px #f9ed0b;
     }
     10%, 90%{
         /* color: #c07aeb; */
@@ -64,23 +64,23 @@ body{
 
 
 .greetings2 span:nth-child(1) {
-    animation-delay: 0.1333333333s; /* Retraso de 0.1 segundos para la primera letra */
+    animation-delay: 0.2s; /* Retraso de 0.1 segundos para la primera letra */
     
 }
 .greetings2 span:nth-child(2) {
-    animation-delay: 0.2666666667s; /* Retraso de 0.2 segundos para la segunda letra */
+    animation-delay: 0.4s; /* Retraso de 0.2 segundos para la segunda letra */
 }
 .greetings2 span:nth-child(3) {
-    animation-delay: 0.4s; /* Retraso de 0.3 segundos para la tercera letra */
+    animation-delay: 0.6s; /* Retraso de 0.3 segundos para la tercera letra */
 }
 .greetings2 span:nth-child(4) {
-    animation-delay: 0.5333333333s; /* Retraso de 0.4 segundos para la cuarta letra */
+    animation-delay: 0.8s; /* Retraso de 0.4 segundos para la cuarta letra */
 }
 .greetings2 span:nth-child(5) {
-    animation-delay: 0.6666666667s; /* Retraso de 0.5 segundos para la quinta letra */
+    animation-delay: 0.10s; /* Retraso de 0.5 segundos para la quinta letra */
 }
 .greetings2 span:nth-child(6) {
-    animation-delay: 0.8s; /* Retraso de 0.6 segundos para la sexta letra */
+    animation-delay: 0.12s; /* Retraso de 0.6 segundos para la sexta letra */
 }
 
 .description{

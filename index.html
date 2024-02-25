@@ -28,48 +28,70 @@
         .greetings, .greetings2 {
             font-size: 36px;
             font-weight: bold;
-            color: #c07aeb;
+            color: #FFD700;
             margin-bottom: 20px;
         }
         .description {
             font-size: 24px;
-            color: white;
-            margin-bottom: 30px;
+            font-family: Arial, sans-serif;
+            position: relative;
+            display: inline-block;
         }
+
+        .description span {
+            position: relative;
+            display: inline-block;
+            animation: glow 2s infinite alternate; /* Animación para que el texto brille */
+        }
+
+        @keyframes glow {
+            0% {
+                color: #FFD700; /* Color inicial - Amarillo */
+                text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700; /* Sombra */
+            }
+            100% {
+                color: #FFA500; /* Color final - Naranja */
+                text-shadow: 0 0 20px #FFA500, 0 0 30px #FFA500, 0 0 40px #FFA500; /* Sombra */
+            }
+        }
+
+
         .button2 {
-        display: inline-block;
-        margin-bottom: 20px;
-    }
+            margin-top: 20px;
+            display: inline-block;
+        }
 
-    .button2 a {
-        display: inline-block;
-        background-color: #ae55e4;
-        color: white;
-        padding: 15px 25px;
-        text-align: center;
-        text-decoration: none;
-        font-size: 16px;
-        border-radius: 5px;
-        transition: background-color 0.3s;
-    }
+        .button2 a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #c07aeb; /* Color bonito para el botón */
+            color: #fff; /* Color de texto blanco */
+            text-decoration: none;
+            border-radius: 25px; /* Bordes redondeados */
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
 
-    .button2 a:hover {
-        background-color: #c07aeb;
-    }
+        .button2 a:hover {
+            background-color: #9310e5; /* Color bonito un poco más claro al pasar el ratón */
+        }
 
-.girl-img {
-    max-width: 300px; /* Ajusta el ancho máximo según tus preferencias */
-    max-height: 300px; /* Ajusta la altura máxima según tus preferencias */
-    width: auto;
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    display: block; /* Para centrar la imagen horizontalmente */
-    margin-left: auto;
-    margin-right: auto;
-    border: 2px solid white; /* Cambia el color del borde aquí */
-    object-fit: cover; /* Esto mantiene las proporciones y recorta la imagen para ajustarse al contenedor */
-}
+        .girl-img {
+            max-width: 300px; /* Ajusta el ancho máximo según tus preferencias */
+            max-height: 300px; /* Ajusta la altura máxima según tus preferencias */
+            width: auto;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            display: block; /* Para centrar la imagen horizontalmente */
+            margin-left: auto;
+            margin-right: auto;
+            border: 2px solid white; /* Cambia el color del borde aquí */
+            object-fit: cover; /* Esto mantiene las proporciones y recorta la imagen para ajustarse al contenedor */
+        }
 
 
     </style>
@@ -77,12 +99,12 @@
 <body>
     <div class="container">
         <img class="girl-img" src="img/l5.jpeg" alt="Lucero">
-        <div class="greetings">
+        <!-- <div class="greetings">
             <span>H</span>
             <span>O</span>
             <span>L</span>
             <span>A</span>
-        </div>
+        </div> -->
         <div class="greetings2">
             <span>L</span>
             <span>U</span>
@@ -94,6 +116,7 @@
         <div class="description">
             <span>Tengo un regalo especial para ti!!</span>
         </div>
+        <br>
         <div class="button2">
             <a href="FLORES.html">Abrir Regalo</a>
         </div>
