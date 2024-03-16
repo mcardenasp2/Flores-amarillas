@@ -64,7 +64,7 @@
         .button2 a {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #c07aeb; /* Color bonito para el botón */
+            background-color: #3eb8ff; /* Color bonito para el botón */
             color: #fff; /* Color de texto blanco */
             text-decoration: none;
             border-radius: 25px; /* Bordes redondeados */
@@ -76,7 +76,7 @@
         }
 
         .button2 a:hover {
-            background-color: #9310e5; /* Color bonito un poco más claro al pasar el ratón */
+            background-color: #0817e3; /* Color bonito un poco más claro al pasar el ratón */
         }
 
         .girl-img {
@@ -93,12 +93,21 @@
             object-fit: cover; /* Esto mantiene las proporciones y recorta la imagen para ajustarse al contenedor */
         }
 
+        #imagenCambiante {
+            width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+            height: auto; /* La altura se ajusta automáticamente para mantener la proporción */
+            display: block; /* para que los bordes redondeados se apliquen correctamente */
+            border-radius: 40%; /* aplica la forma de círculo */
+            }
+
+
 
     </style>
 </head>
 <body>
     <div class="container">
-        <img class="girl-img" src="img/lucy.jpeg" alt="Lucero">
+        <img class="girl-img" src="img/lucy.jpeg" alt="Lucero" id="imagenCambiante">
+        <!-- <img class="girl-img" src="img/lucy.jpeg" alt="Lucero" id="imagenCambiante"> -->
         <!-- <div class="greetings">
             <span>H</span>
             <span>O</span>
@@ -121,5 +130,20 @@
             <a href="FLORES.html">Abrir Regalo</a>
         </div>
     </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const imagenes = ['img/lucy.jpeg', 'img/lu1.jpg', 'img/lucero.jpg', 'img/lu5.jpeg', 'img/lu4.jpeg', 'img/lu6.jpeg']; // Rutas de las imágenes
+        let indice = 0;
+
+        // Función para cambiar la imagen cada medio segundo
+        setInterval(function() {
+            // Actualizar la fuente de la imagen con la siguiente imagen en el array
+            document.getElementById('imagenCambiante').src = imagenes[indice];
+            indice = (indice + 1) % imagenes.length; // Avanzar al siguiente índice circularmente
+        }, 1000); // Cambiar cada medio segundo (500 milisegundos)
+        });
+    </script>
 </body>
 </html>
